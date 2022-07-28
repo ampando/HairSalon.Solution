@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Restaurant.Models;
+using Salon.Models;
 
 namespace Salon
 {
@@ -25,7 +25,7 @@ namespace Salon
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-        .AddDbContext<RestaurantContext>(options => options
+        .AddDbContext<SalonContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
     }
 
