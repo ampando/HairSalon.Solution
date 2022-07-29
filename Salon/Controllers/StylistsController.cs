@@ -33,7 +33,7 @@ namespace Salon.Controllers
     [HttpPost]
     public ActionResult Create(Stylist Stylist)
     {
-      _db.Stylist.Add(stylist);
+      _db.Stylists.Add(stylist);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
