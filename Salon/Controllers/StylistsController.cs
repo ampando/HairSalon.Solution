@@ -17,7 +17,6 @@ namespace Salon.Controllers
       _db = db;
     }
   
-    [HttpGet("/Stylists")]
     public ActionResult Index()
     {
       List<Stylist> model = _db.Stylists.ToList();
@@ -26,12 +25,11 @@ namespace Salon.Controllers
   
     public ActionResult Create()
     {
-      ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistName");
       return View();
     }
   
     [HttpPost]
-    public ActionResult Create(Stylist Stylist)
+    public ActionResult Create(Stylist stylist)
     {
       _db.Stylists.Add(stylist);
       _db.SaveChanges();
@@ -40,9 +38,23 @@ namespace Salon.Controllers
 
     public ActionResult Details(int id)
     {
-      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      Stylist thisStylist = _db.Stylists.Include(stylist => stylist.Clients).FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
+
+    public ActionResult Edit(int id)
+    {
+    var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+    return View(thisStylist);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Stylist stylist)
+    {
+      _db.Entry(stylist).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }  
 
     public ActionResult Delete(int id)
     {
@@ -53,26 +65,11 @@ namespace Salon.Controllers
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
-      var thisStylist = _db.Stylist.FirstOrDefault(stylist => stylist.StylistId == id);
+      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       _db.Stylists.Remove(thisStylist);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-    
-    public ActionResult Edit(int id)
-    {
-    Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
-    ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistName");
-    return View(thisStylist);
-  }
-
-    [HttpPost]
-    public ActionResult Edit(Stylist stylist)
-    {
-      _db.Entry(stylist).State = EntityState.Modified;
-      _db.SaveChanges();
-      return RedirectToAction("Index");
-    }  
   }
 }
 
