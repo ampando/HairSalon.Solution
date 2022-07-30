@@ -4,13 +4,13 @@
 
 @model Salon.Models.Client
 
-<h1>Add a new client to the salon!</h1>
+<h1>Add a New Client to The Salon:</h1>
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.ClientName)
   @Html.TextBoxFor(model => model.ClientName)
 
-  <input type="submit" value="Add new client name"/>
+  <input type="submit" value="Add New Client"/>
 }
 <hr />
-<p>@Html.ActionLink("Show all client", "Index")</p>
+<p>@Html.ActionLink("Show All Clients", "Index")</p>
