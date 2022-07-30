@@ -2,6 +2,16 @@ body{
   margin: 30px;
   background-color:lightsteelblue;
   font-family: 'fantasy', papyrus;
-  
 }
 
+h1 {
+  font-size: 40px;
+  margin: 20px;
+  font-weight: bold;
+  color:coral
+}
+
+#splash h1 {
+  text-align: center;
+  margin: 100;
+}

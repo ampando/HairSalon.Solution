@@ -88,10 +88,26 @@ CREATE TABLE `stylists` (
   PRIMARY KEY (`StylistId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+## appsettings.json
+
+Update your username and password in the appsettings.json file. By default these are set to user:root and an [empty password].
+
+## Protecting Your Data
+
+1. In your project's root directory, create an .gitignore file.
+
+2. Add the following to your .gitignore file (this protects your sensitive data).
+    DO NOT PROCEED UNTIL YOU COMPLETE THIS STEP!
+      appsettings.json
+      bin/
+      obj/
+
+3. Commit your .gitignore file.
+
 ## Known Bugs
 
 Currently the 'add new client' submission does not link 'new client' input to a stylist.
-The styling needs more time. 
+The css styling is not loading. 
 
 ## Support and Contact Details
 
