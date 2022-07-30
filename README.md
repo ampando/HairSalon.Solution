@@ -107,7 +107,7 @@ Update your username and password in the appsettings.json file. By default these
 ## Known Bugs
 
 Currently the 'add new client' submission does not link 'new client' input to a stylist.
-The css styling is not loading. 
+The css styling needs more time. 
 
 ## Support and Contact Details
 

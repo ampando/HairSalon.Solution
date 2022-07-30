@@ -4,14 +4,33 @@ body{
   font-family: 'fantasy', papyrus;
 }
 
-h1 {
-  font-size: 40px;
-  margin: 20px;
-  font-weight: bold;
-  color:coral
+ul {
+  margin-bottom: 30px;
 }
 
-#splash h1 {
+li {
+  font-size: 25px;
+}
+
+p {
+  font-size: 25px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 70px;
+  margin: 20px;
+  font-weight: bold;
+  color:darkolivegreen;
+}
+
+#splash {
   text-align: center;
   margin: 100px;
+}
+
+label{
+  width: 95px;
+  text-align: left;
+  margin-bottom: 10px;
 }
