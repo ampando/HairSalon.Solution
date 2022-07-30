@@ -48,7 +48,7 @@ Another C# independent project! We've attached a database using MySql Workbench 
 2. Clone this project using the GitHub button or the command:
 `$ git clone https://github.com/ampando/HairSalon.Solution.git`
 
-3. Confirm that MYSQL server is running by opening your terminal and entering the command `mysql -uroot -pepicodus.
+3. Confirm that MYSQL server is running by opening your terminal and entering the command `mysql -uroot -pepicodus`.
 
 4. Open MySQL Workbench and click on the the `Administration` tab. 
 
@@ -58,7 +58,7 @@ Another C# independent project! We've attached a database using MySql Workbench 
 
 7. Click on the `New` button in the Default Schema to be `Imported To` and for the schema name enter 'adrienne_matosich'.
 
-8. In the drop down menu, select (Dump Structure Only) if you'd like to import on ly the data structure or (Dump Structure and Data) if you'd like to dump both the structure and data previously entered. 
+8. In the drop down menu, select (Dump Structure Only) if you'd like to import only the data structure or (Dump Structure and Data) if you'd like to dump both the structure and data previously entered. 
 
 9. Click the `Start Import` button to finish adding the database.
 
@@ -69,6 +69,7 @@ Another C# independent project! We've attached a database using MySql Workbench 
 ## SQL Schema Query
 
 The SQL commands below can be used with a the SQL manager to create the database for this project:
+
 DROP DATABASE IF EXISTS `adrienne_matosich`;
 CREATE DATABASE `adrienne_matosich`;
 
@@ -90,7 +91,8 @@ CREATE TABLE `stylists` (
 
 ## appsettings.json
 
-Update your username and password in the appsettings.json file. By default these are set to user:root and an [empty password].
+Update your username and password in the appsettings.json file. By default these are set to:
+user:root and an [empty password].
 
 ## Protecting Your Data
 
@@ -98,9 +100,9 @@ Update your username and password in the appsettings.json file. By default these
 
 2. Add the following to your .gitignore file (this protects your sensitive data).
     DO NOT PROCEED UNTIL YOU COMPLETE THIS STEP!
-      appsettings.json
-      bin/
-      obj/
+    * appsettings.json
+    * bin/
+    * obj/
 
 3. Commit your .gitignore file.
 
@@ -125,4 +127,4 @@ If there are any issues or questions, please reach out to me through [my GitHub 
 
 *This project uses the following license: [MIT](https://opensource.org/licenses/MIT)*
 
-Copyright(c)2022 **_Adrienne Matosich_** 
+Copyright(c) 2022  **_Adrienne Matosich_** 
