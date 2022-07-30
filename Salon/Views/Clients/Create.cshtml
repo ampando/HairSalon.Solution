@@ -7,9 +7,11 @@
 <h1>Add a New Client to The Salon:</h1>
 @using (Html.BeginForm())
 {
+  
   @Html.LabelFor(model => model.ClientName)
   @Html.TextBoxFor(model => model.ClientName)
-
+  @Html.DisplayNameFor(model => model.ClientName) 
+  @Html.DisplayFor(model => model.ClientName)
   <input type="submit" value="Add New Client"/>
 }
 <hr />
