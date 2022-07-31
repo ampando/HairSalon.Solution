@@ -34,7 +34,6 @@ namespace Salon.Controllers
       _db.Clients.Add(client);
       _db.SaveChanges();
       return RedirectToAction("Index");
-      return View(client);
     }
 
     public ActionResult Details(int id)

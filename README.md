@@ -108,7 +108,6 @@ user:root and an [empty password].
 
 ## Known Bugs
 
-Currently the 'add new client' submission does not link 'new client' input to a stylist.
 The css styling needs more time. 
 
 ## Support and Contact Details
@@ -122,6 +121,7 @@ If there are any issues or questions, please reach out to me through [my GitHub 
 *  [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 *  [.NET5.0](https://dotnet.microsoft.com/download/dotnet-core/net5.0)
 *  [ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-3.1)
+*  [Entity FrameWork](https://docs.microsoft.com/en-us/ef/)
 
 ### License
 
